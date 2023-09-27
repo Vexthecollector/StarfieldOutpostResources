@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Starfield Ship Part Finder</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body>
+<br>
+<br>
+<label for="habSkill">Hab Skill Level</label>
+<input id="habSkill" type="range" value ="0" min="0" max="4" step="1" oninput="this.nextElementSibling.value = this.value">
+<output>0</output>
+<br>
+    <button onclick="AddResource()"> Add Resource</button> 
+
+    <br>
+    <input id="Resource" placeholder="Resource" list="Resources">
+    <datalist class="datalist" id="Resources">
+    </datalist>
+
+    <br>
+    <table id="FilterTable">
+        <tr id="FilterHeaderRow">
+            <td>Name</td>
+            <td>Short Name</td>
+            <td>Remove</td>
+        </tr>
+    </table>
+    <br>
+    <button onclick="FilterData()">Filter</button>
+    <br>
+    <table id="MainTable">
+        <tr id="HeaderRow"></tr>
+        
+    </table>
+</body>
+
+</html>
